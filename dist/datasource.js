@@ -125,6 +125,19 @@ System.register(['lodash'], function (_export, _context) {
             }).then(this.mapToTextValue);
           }
         }, {
+          key: 'instanceIdFindQuery',
+          value: function instanceIdFindQuery(query) {
+            var interpolated = {
+              target: this.templateSrv.replace(query, null, 'regex')
+            };
+
+            return this.doRequest({
+              url: this.url + '/instance',
+              data: interpolated,
+              method: 'POST'
+            }).then(this.mapToTextValue);
+          }
+        }, {
           key: 'mapToTextValue',
           value: function mapToTextValue(result) {
             return _.map(result.data, function (d, i) {

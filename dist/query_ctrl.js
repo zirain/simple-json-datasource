@@ -81,7 +81,7 @@ System.register(['app/plugins/sdk', './css/query-editor.css!'], function (_expor
         }, {
           key: 'getInstances',
           value: function getInstances(query) {
-            return this.datasource.metricFindQuery(query || '');
+            return this.datasource.instanceIdFindQuery(query || '');
           }
         }, {
           key: 'toggleEditorMode',

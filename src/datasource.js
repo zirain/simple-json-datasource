@@ -83,6 +83,18 @@ export class GenericDatasource {
     }).then(this.mapToTextValue);
   }
 
+  instanceIdFindQuery(query){
+    var interpolated = {
+      target: this.templateSrv.replace(query, null, 'regex')
+  };
+
+  return this.doRequest({
+    url: this.url + '/instance',
+    data: interpolated,
+    method: 'POST',
+  }).then(this.mapToTextValue);
+}
+
   mapToTextValue(result) {
     return _.map(result.data, (d, i) => {
       if (d && d.text && d.value) {

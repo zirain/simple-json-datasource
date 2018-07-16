@@ -1,6 +1,6 @@
 {
-  "name": "SimpleJson",
-  "id": "grafana-simple-json-datasource",
+  "name": "CustomJson",
+  "id": "custom-json-datasource",
   "type": "datasource",
 
   "partials": {
@@ -11,9 +11,9 @@
   "annotations": true,
 
   "info": {
-    "description": "simple json datasource",
+    "description": "custom json datasource",
     "author": {
-      "name": "Grafana Labs",
+      "name": "zirain",
       "url": "https://grafana.com"
     },
     "logos": {
@@ -24,7 +24,7 @@
       {"name": "GitHub", "url": "https://github.com/grafana/simple-json-datasource"},
       {"name": "MIT License", "url": "https://github.com/grafana/simple-json-datasource/blob/master/LICENSE"}
     ],
-    "version": "1.4.0",
+    "version": "0.0.1",
     "updated": "2018-06-20"
   },
 

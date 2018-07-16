@@ -17,7 +17,7 @@ export class GenericDatasourceQueryCtrl extends QueryCtrl {
   }
 
   getInstances(query){
-    return this.datasource.metricFindQuery(query || '');
+    return this.datasource.instanceIdFindQuery(query || '');
   }
 
   toggleEditorMode() {

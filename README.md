@@ -1,4 +1,7 @@
-## Simple JSON Datasource - a generic backend datasource
+## Custom JSON Datasource
+
+Copy from grafana-simple-json-datasource, add `/instance` api
+
 
 More documentation about datasource plugins can be found in the [Docs](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/developing/datasources.md).
 
@@ -7,6 +10,7 @@ This also serves as a living example implementation of a datasource.
 Your backend needs to implement 4 urls:
 
  * `/` should return 200 ok. Used for "Test connection" on the datasource config page.
+ * `/instance` used by the find instance options on the query tab in panels.
  * `/search` used by the find metric options on the query tab in panels.
  * `/query` should return metrics based on input.
  * `/annotations` should return annotations.
@@ -50,8 +54,8 @@ Example `timeserie` request
   "interval": "30s",
   "intervalMs": 30000,
   "targets": [
-     { "target": "upper_50", "refId": "A", "type": "timeserie" },
-     { "target": "upper_75", "refId": "B", "type": "timeserie" }
+     { "target": "upper_50", "refId": "A", "type": "timeserie", "instance": "instanceId" },
+     { "target": "upper_75", "refId": "B", "type": "timeserie", "instance": "instanceId" }
   ],
   "adhocFilters": [
     "key": "City"
