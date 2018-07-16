@@ -159,7 +159,8 @@ System.register(['lodash'], function (_export, _context) {
                 target: _this.templateSrv.replace(target.target, options.scopedVars, 'regex'),
                 refId: target.refId,
                 hide: target.hide,
-                type: target.type || 'timeserie'
+                type: target.type || 'timeserie',
+                instanceId: target.instanceId
               };
             });
 
